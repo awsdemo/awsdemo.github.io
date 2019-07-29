@@ -58,8 +58,8 @@ jekyll 生成网站输出的地方, 一般需要在 .gitignore 中屏蔽掉这�
 
 
 ## 5.我们的网站：
-网站地址：https://awsdemocenter.github.io/  
-github地址：https://github.com/AwsDemoCenter/AwsDemoCenter.github.io
+网站地址：https://awsdemo.github.io/  
+github地址：https://github.com/AwsDemo/AwsDemo.github.io
 
 ## 6.demo的编写：
 如果需要新增一个demo，只需要在_post文件夹下加一个 .markdown文件，文件的标题为 year-month-day-title (xxxx-xx-xx-title)，然后在文章的开头
@@ -68,5 +68,11 @@ github地址：https://github.com/AwsDemoCenter/AwsDemoCenter.github.io
 ---
 layout:  post
 title: 
+toc: true
 ---
+```
+如果需要增加图片，请使用以下方式,可以支持图片的放大预览：
+```
+<a data-fancybox="gallery" href=" ">
+![]()
 ```
