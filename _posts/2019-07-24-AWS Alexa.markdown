@@ -53,7 +53,91 @@ wget --no-check-certificate https://raw.githubusercontent.com/finishy1995/voixa/
 ```
 ### 3.3 配置 Alexa
 
-在 [Amazon Developer 网站](https://developer.amazon.com/) 上配置自己的 Alexa Skill,您可以参考如下配置信息 
+在 [Amazon Developer 网站](https://developer.amazon.com/) 上配置自己的 Alexa Skill,您需要首先创建一个账号，然后可以参考如下配置信息：
+<a data-fancybox="gallery" href="https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/alexa.png">
+![Alexa配置界面](https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/alexa.png)
+</a>
+#### （1）Invocation Name
 
+<a data-fancybox="gallery" href="https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa1.png">
+![](https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa1.png)
+</a>
 
+#### （2）Slot Types
 
+<a data-fancybox="gallery" href="https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa2.png">
+![](https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa2.png)
+</a>
+#### （3）Intents
+创建一个intents，添加Sample Utterances，以及Intent Slots
+<a data-fancybox="gallery" href="https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa3.png">
+![](https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa3.png)
+</a>
+Sample Utterances配置代码：
+```
+MyBlogIsIntent my favorite blog is {blog}
+WhatsMyBlogIntent what's my favorite blog
+WhatsMyBlogIntent what is my favorite blog
+WhatsMyBlogIntent what's my blog
+WhatsMyBlogIntent what is my blog
+WhatsMyBlogIntent my blog
+WhatsMyBlogIntent my favorite blog
+WhatsMyBlogIntent get my blog
+WhatsMyBlogIntent get my favorite blog
+WhatsMyBlogIntent give me my favorite blog
+WhatsMyBlogIntent give me my blog
+WhatsMyBlogIntent what my blog is
+WhatsMyBlogIntent what my favorite blog is
+WhatsMyBlogIntent yes
+WhatsMyBlogIntent yup
+WhatsMyBlogIntent sure
+WhatsMyBlogIntent yes pleaseBlog
+```
+#### （4）JSON Editor
+
+<a data-fancybox="gallery" href=https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa4.png"">
+![](https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa4.png)
+</a>
+Intent Schema配置代码：
+```
+{
+    "intents": [
+        {
+            "intent": "AMAZON.ResumeIntent"
+        },
+        {
+            "intent": "AMAZON.PauseIntent"
+        },
+        {
+            "slots": [
+                {
+                    "name": "blog",
+                    "type": "LIST_OF_BLOG"
+                }
+            ],
+            "intent": "MyBlogIsIntent"
+        },
+        {
+            "intent": "WhatsMyBlogIntent"
+        },
+        {
+            "intent": "AMAZON.HelpIntent"
+        }
+    ]
+}
+```
+#### （5）Endpoint
+
+<a data-fancybox="gallery" href=https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa5.png"">
+![](https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa5.png)
+</a>
+#### （6）订阅信息
+在控制台中cloudformation打开下图所示的web page url，然后订阅希望Alexa读的信息。
+
+<a data-fancybox="gallery" href="https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa6.png">
+![](https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa6.png)
+</a>
+所有配置完成之后，就可以在Alexa配置网站的test中进行Alexa测试。
+### 3.4 Alexa Simulator
+
+也可以测试Alexa Skill 在你自己的 Echo/Echo dot 或者使用 ![echosim](https://echosim.io/welcome)
