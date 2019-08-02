@@ -95,9 +95,10 @@ WhatsMyBlogIntent yes pleaseBlog
 ```
 #### （4）JSON Editor
 
-<a data-fancybox="gallery" href=https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa4.png"">
+<a data-fancybox="gallery" href="https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa4.png">
 ![](https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa4.png)
 </a>
+
 Intent Schema配置代码：
 ```
 {
@@ -128,11 +129,11 @@ Intent Schema配置代码：
 ```
 #### （5）Endpoint
 
-<a data-fancybox="gallery" href=https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa5.png"">
+<a data-fancybox="gallery" href="https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa5.png">
 ![](https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa5.png)
 </a>
 #### （6）订阅信息
-在控制台中cloudformation打开下图所示的web page url，然后订阅希望Alexa读的信息。
+在控制台中cloudformation打开下图所示的WebsiteURL，然后订阅希望Alexa读的信息。
 
 <a data-fancybox="gallery" href="https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa6.png">
 ![](https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa6.png)
@@ -140,4 +141,4 @@ Intent Schema配置代码：
 所有配置完成之后，就可以在Alexa配置网站的test中进行Alexa测试。
 ### 3.4 Alexa Simulator
 
-也可以测试Alexa Skill 在你自己的 Echo/Echo dot 或者使用 ![echosim](https://echosim.io/welcome)
+也可以测试Alexa Skill 在你自己的 Echo/Echo dot 或者使用 [echosim](https://echosim.io/welcome)
