@@ -141,4 +141,4 @@ Intent Schema配置代码：
 所有配置完成之后，就可以在Alexa配置网站的test中进行Alexa测试。
 ### 3.4 Alexa Simulator
 
-也可以测试Alexa Skill 在你自己的 Echo/Echo dot 或者使用 [echosim](https://echosim.io/welcome)
+也可以在你自己的 Echo/Echo dot 上测试Alexa Skill或者使用 [echosim](https://echosim.io/welcome)网站进行测试。
