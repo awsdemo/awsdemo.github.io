@@ -1,4 +1,4 @@
-# AwsDemoCenter.github.io
+# AwsDemo.github.io
 
 ## 1.jekyll 简介
 jekyll 是一个静态网站生成器.通过 标记语言 markdown 或 textile 和 模板引擎 liquid 转换生成网页.jekyll只是一个生成静态网页的工具，不需要数据库支持。最关键的是jekyll可以免费部署在Github上，而且可以绑定自己的域名。
