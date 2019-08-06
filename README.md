@@ -1,5 +1,4 @@
-# awsdemo.github.io
-自助往网站[awsdemo](https://awsdemo.github.io/)增加demo的方法：
+## 自助往网站[awsdemo](https://awsdemo.github.io/)增加demo的方法：
 
 1. 发送邮件到lanyifa@amazon.com或qianlish@amazon.com，申请加入组织，请在邮件中提供GitHub账号以及将添加的内容信息。管理员审核通过之后会发送邮件通知
 
