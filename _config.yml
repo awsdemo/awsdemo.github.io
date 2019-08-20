@@ -54,6 +54,6 @@ comments:
 
   gitalk_owner: 'awsdemo'
 
-  gitalk_admin: 'awsdemo'
+  gitalk_admin: 'awsdemocenter'
 
   distractionFreeMode: true
