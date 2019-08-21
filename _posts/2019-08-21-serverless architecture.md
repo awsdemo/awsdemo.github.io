@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "APIgateway+Lambda+Sagemaker"
+title:  "APIGW+Lambda+Sagemaker"
 toc: true
 ---
 
