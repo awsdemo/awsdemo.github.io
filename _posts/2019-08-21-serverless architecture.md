@@ -1,4 +1,3 @@
-# API Gateway+Lambda构建无服务器架构
 
 ## 1. 实验目的
 
@@ -33,7 +32,7 @@ lambda 是一项计算服务，可以使您无需配置或管理服务器即可�
  <a data-fancybox="gallery" href="https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/lambdaflow.png">
 ![lambda](https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/lambdaflow.png)</a>
 
-###  
+
 
 ## 3. Lambda 集成API Gateway和sagemaker
 
