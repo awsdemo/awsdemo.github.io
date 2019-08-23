@@ -39,3 +39,21 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+#comment评论功能
+
+comments:
+
+  gitalk: true
+
+  gitalk_clientID: '511448cd2dda9b934104'
+
+  gitalk_Secret: '6e8c4e309831eb53037ffec1a5b7333f4181f251'
+
+  gitalk_repo: 'awsdemo.github.io'
+
+  gitalk_owner: 'awsdemo'
+
+  gitalk_admin: 'awsdemocenter'
+
+  distractionFreeMode: true
