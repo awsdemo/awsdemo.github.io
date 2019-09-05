@@ -97,7 +97,8 @@ AWS cloudformation模板部署了Amazon s3存储桶，api网关和aws lambda函�
 
 3. 拼接api接口调用地址，将api地址拼接上一步中的base64值，如
 
-   ```https://j4h1yfm3bi.execute-api.cn-north-1.amazonaws.com.cn/prod/eyAiYnVja2V0IjogInB3bWltYWdlIiwgImtleSI6ICJiZXIuanBnIiwgImVkaXRzIjogeyAicmVzaXplIjogeyAid2lkdGgiOiAzMDAsICJoZWlnaHQiOiAzMDAsICJmaXQiOiAiY292ZXIiIH0sICJuZWdhdGUiOiB0cnVlIH0gfQo=
+   ```
+   https://j4h1yfm3bi.execute-api.cn-north-1.amazonaws.com.cn/prod/eyAiYnVja2V0IjogInB3bWltYWdlIiwgImtleSI6ICJiZXIuanBnIiwgImVkaXRzIjogeyAicmVzaXplIjogeyAid2lkdGgiOiAzMDAsICJoZWlnaHQiOiAzMDAsICJmaXQiOiAiY292ZXIiIH0sICJuZWdhdGUiOiB0cnVlIH0gfQo=
    ```
 
 4. 通过浏览器测试
