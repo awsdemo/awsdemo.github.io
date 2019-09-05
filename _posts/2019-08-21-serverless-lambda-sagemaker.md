@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "APIGW+Lambda+Sagemaker"
+title:  "Serverless Integrated AI "
 toc: true
 ---
 
