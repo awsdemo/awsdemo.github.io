@@ -55,7 +55,7 @@ AWS cloudformation模板部署了Amazon s3存储桶，api网关和aws lambda函�
 
 本部分内容介绍如何使用部署好的无服务器架构来处理图片
 
-#### 通过浏览器使用
+### 通过浏览器使用
 
 1. 打开浏览器，输入demoui的地址。如下图
 
@@ -73,7 +73,7 @@ AWS cloudformation模板部署了Amazon s3存储桶，api网关和aws lambda函�
 
 **图片预览**下方的**请求正文**是发送给lambda函数进行处理的参数，**格式化URL**是可以直接调用的地址。
 
-#### 通过api调用-1
+### 通过api调用-1
 
 除了通过浏览器对图片进行处理之外，还以通过直接调用api的方式。
 
@@ -113,7 +113,7 @@ AWS cloudformation模板部署了Amazon s3存储桶，api网关和aws lambda函�
 
    ![image-20190905145155083](https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/serverless-image-handler/image-20190905145155083.png)
 
-#### 通过api调用-2
+### 通过api调用-2
 
 1. 拼装url地址，拼接格式为：api地址+s3存储桶名称+图片处理参数+图片名称
 
