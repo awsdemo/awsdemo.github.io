@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "Serverless Image handler"
+title:  "无服务器化图片处理"
 toc: true
 ---
-## 1.Introduction
+## 概述
 
 为了帮助客户提供低延迟的网站响应，并降低图像优化、操作和处理的成本，AWS提供了无服务器图像处理程序，该解决方案结合了高度可用、受信任的AWS服务和开源的图像处理套件Sharp，以实现快速响应。在aws云上进行经济高效的图像处理。此参考实现自动部署和配置一个无服务器架构，该架构针对动态图像操作进行了优化，使用amazon simple storage service（amazon s3）以低成本实现可靠和持久的云存储。
 
-## 2.Architecture
+## 架构总览
 
-aws提供了一个简单的解决方案，可以自动部署和配置为动态图像操作而优化的无服务器体系结构。下图展示了无服务器图像处理程序体系结构，您可以使用该解决方案和aws cloudformation模板在几分钟内进行部署。
+aws提供了一个简单的解决方案，可以自动部署和配置为动态图像操作而优化的无服务器体系结构。下图展示了无服务器图像处理程序体系结构，您可以aws cloudformation模板或者CDK在几分钟内进行部署该解决方案。
 
 ![image-20190905134239244](https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/serverless-image-handler/image-20190905134239244.png)
 
@@ -21,7 +21,7 @@ aws提供了一个简单的解决方案，可以自动部署和配置为动态�
 
 AWS cloudformation模板部署了Amazon s3存储桶，api网关和aws lambda函数。S3提供了静态网站，通过网站交互式的对图片进行处理。api网关提供端点资源并触发lambda函数。lambda函数从客户自定义的Amazon s3 存储桶中检索图像，并使用sharp将图像的修改版本返回给api网关。
 
-### 准备工作
+## 部署方式1 - cloudformation
 
 1. 下载cloudformation模版
 
@@ -43,7 +43,15 @@ AWS cloudformation模板部署了Amazon s3存储桶，api网关和aws lambda函�
 
 5. 将待处理的图片上传至上述桶中
 
-## 3.how to use
+## 部署方式2 - CDK
+
+1. 参考https://github.com/AwsDemoCenter/serverless-image-handler
+
+2. 创建存放待处理图片的amazon s3桶
+
+3. 将待处理的图片上传至上述桶中
+
+## 如何使用
 
 本部分内容介绍如何使用部署好的无服务器架构来处理图片
 
