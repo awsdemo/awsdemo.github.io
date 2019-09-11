@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Amazon Services List"
+title:  "AWS服务列表"
 toc: true
 ---
 
 
-## 1.Introduction 
+## 1.简介
   一套网站应用,用于展示 AWS 区域对应的服务信息，并提供搜索功能以支持区域选型和区域对比。由Serverless架构实现，使用Amazon CloudWatch Events、AWS Lambda、Amazon DynamoDB、Amazon S3、Amazon CloudFront等服务生成并展示数据，前端使用了React、Webpack以及Antd。
-## 2.Function of this Demo 
+## 2.Demo功能 
 * 数据每12小时自动更新。  
 * 可选择显示指定区域和指定服务的 AWS 区域表。
 * 下载 AWS 区域表 csv 文件。
@@ -16,9 +16,9 @@ toc: true
 * 区域间服务不同的对比。  
 示例页面： [Demo link](http://aws-status-check-website.s3-website.ap-northeast-2.amazonaws.com/)
 
-## 3.How to use the Demo
+## 3.如何使用本Demo
 
-### 3.1 Build Code
+### 3.1 构建代码
 
 ```
 $ git clone https://github.com/AwsDemoCenter/aws-services-list
@@ -27,16 +27,16 @@ $ yarn install
 $ yarn build
 ```
 注：如有需要，请先安装yarn
-### 3.2 Configure Server
+### 3.2 配置服务器
 
 选择一个部署所有服务的AWS区域，确保该区域内至少包含有上述提到的所有服务。  
 以下操作使用AWS CLI，请确保已经安装
-#### (1) Configure Amazon DynamoDB
+#### (1) 配置DynamoDB
 使用 AWS CLI 在DynamoDB中创建一张命名为aws-services-list表，主分区键为id（String）。其余按照实际情况进行配置，一般情况下默认即可。
 ``` 
 $  aws dynamodb create-table --table-name aws-services-list --attribute-definitions  AttributeName=id,AttributeType=S --key-schema AttributeName=id,KeyType=HASH --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5
 ```
-#### (2) Configure Amazon IAM Role
+#### (2) 配置 IAM Role
 为lambda函数配置IAM角色,至少需要Amazon DynamoDB的读写权限以及Amazon S3的写入权限
 ```
 #create trust relationship policy document that grants an entity permission to assume the role
@@ -58,7 +58,7 @@ $ aws iam create-role --role-name service-list --assume-role-policy-document fil
 $ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess --role-name service-list
 $ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess --role-name service-list
 ```
-#### (3) Configure Amazon Lambda
+#### (3) 配置 Lambda
 将Lambda文件夹下的commander.py和data.json文件压缩为*.zip压缩包。创建Lambda函数aws-services-list-commander，设置处理程序为commander.lambda_handler，并在基本设置中将超时时间设置为5分钟,运行语言Python 2.7。
 ```
 $ cd lambda 
@@ -80,7 +80,7 @@ $ aws lambda create-function --function-name aws-services-list-detector --runtim
 $ zip  transmitter.zip  transmitter.py
 $ aws lambda create-function --function-name aws-services-list-transmitter --runtime python2.7 --role arn:aws:iam::809180791604:role/service-list --handler  transmitter.py --zip-file fileb://transmitter.zip --timeout 10
 ```
-#### (4) Configure Amazon CloudWatch Events
+#### (4) 配置 CloudWatch Events
 在 CloudWatch中创建五条新的规则，分别与lambda函数aws-services-list-commander和aws-services-list-transmitter进行匹配。
 其中aws-services-list-commander需要设置四条触发规则（随着服务的增多，参数会进行相应的更改），而aws-services-list-transmitter只需要设置一条无输入参数的触发规则。
 
@@ -142,7 +142,7 @@ $ aws lambda add-permission --function-name aws-services-list-transmitter --stat
 $ aws events put-targets --rule aws-services-list-transmitter --targets "Id"="transmitter",\
   "Arn"="YOUR_LAMBDA(aws-services-list-transmitter)_ARN" 
 ```
-#### (5) Configure Amazon S3
+#### (5) 配置S3
 
 创建S3存储桶，将 build 文件夹下所有文件上传到储存桶中，并设置所有文件公开化
 设置S3存储桶为静态网站，主页为index.html
@@ -158,7 +158,7 @@ $ aws s3 website s3://aws-services-list/ --index-document index.html
 ```
 至此，可以通过s3链接访问demo
 
-## 4.Run the Code Locally
+## 4.本地运行代码
 执行yarn start，即可在浏览器(chrome或IE9及以上)中进行本地访问
 ```
 $ yarn start
