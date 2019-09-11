@@ -5,7 +5,7 @@ toc: true
 ---
 
 
-## 1.简介
+## 1.概述
   一套网站应用,用于展示 AWS 区域对应的服务信息，并提供搜索功能以支持区域选型和区域对比。由Serverless架构实现，使用Amazon CloudWatch Events、AWS Lambda、Amazon DynamoDB、Amazon S3、Amazon CloudFront等服务生成并展示数据，前端使用了React、Webpack以及Antd。
 ## 2.Demo功能 
 * 数据每12小时自动更新。  
