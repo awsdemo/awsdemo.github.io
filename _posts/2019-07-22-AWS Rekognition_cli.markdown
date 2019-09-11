@@ -1,21 +1,21 @@
 ﻿---
 layout: post
-title:  "Amazon Rekognition"
+title:  "Rekognition功能展示"
 toc: true
 ---
 
 
-## 1.Introduction  
+## 1.简介  
   利用 Amazon Rekognition，可将图像和视频分析轻松添加到您的应用程序。您只需向 Rekognition API 提供图像或视频，然后此服务就能识别物体、人员、文字、场景和活动。它还可以检测到任何不合适的内容。Amazon Rekognition 还提供了高度准确的人脸分析和人脸识别。您可以检测、分析和比较各种使用案例中的人脸，包括用户确认、编录、人员计数和公共安全。Amazon Rekognition 基于同样由 Amazon 计算机视觉科学家开发的成熟且高度可扩展的深度学习技术，每天能够分析数十亿图像和视频- 无需使用任何机器学习专业技能。Amazon Rekognition 包含一个简单易用的 API，该 API 可快速分析存储在 Amazon S3 中的任何图像或视频文件。Amazon Rekognition 始终从新数据进行学习，我们会不断向此服务添加新的标签和人脸识别功能。
 
-## 2.Function of this Demo
+## 2.Demo功能
 
 这是一个Amazon Rekognition服务的示例项目。在本演示项目中，我们将展示AWS图像识别技术分别应用于对象场景检测，图像审核，面部分析，面孔比较以及面部识别等方面的实际效果。您可以通过页面演示来体验图像识别技术的准确性与效果。
 本演示仅用于试验和参考用途，如果您想开发自己的图像识别应用，请登录AWS官网查看详细信息。  
 demo示例：[demo link](http://rekognition111demo.s3-website-ap-southeast-1.amazonaws.com/)  
 
 
-## 3.How to use the Demo
+## 3.如何使用本Demo
 开始使用本demo，必须进行以下配置
 ### 3.1 cognito身份池创建步骤：
 在aws cognito中*创建新的身份池*，并允许未授权的身份验证 
@@ -110,7 +110,7 @@ $ {
 $ aws s3api put-bucket-cors --bucket amazon-rekognition-demo --cors-configuration file://cors.json
 ```  
 至此，可以点击s3静态托管网站的url,体验rekognition的图像识别功能。若要使用rekognition的面部识别功能，还需要执行以下步骤。
-## 4.Face Recognition
+## 4.人脸识别
 
 在面部识别功能的正常使用之前，需要先创建人脸集合，将人脸存储在该集合中。然后该功能会向您提供搜索集合中与要识别的图像匹配度最高的人脸。 
 
