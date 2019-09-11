@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Serverless Integrated AI "
+title:  "无服务器集成sagemaker模型 "
 toc: true
 ---
 
