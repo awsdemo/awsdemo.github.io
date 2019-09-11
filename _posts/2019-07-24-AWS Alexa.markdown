@@ -5,10 +5,10 @@ toc: true
 ---
 
 
-## 1.Introduction 
+## 1.概述
 这是一个Amazon Alexa的示例项目。在本示例项目中，考虑到资讯爆炸的情况，我们想要利用Alexa自动播报真正感兴趣的话题。利用Serverless无服务器架构，实现了订阅指定网站的指定关键词（例：网站 AWS，关键词 大数据），利用Alexa自动播报相关资讯的简讯。  
 本演示仅用于试验和参考用途，如果您想在云端开发自己的应用，请登录AWS官网查看详细信息。
-## 2.Architecture of this Demo 
+## 2.本Demo架构
 Serverless 数据采集架构：  
 <a data-fancybox="gallery" href="https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Data_Collect.jpeg">
 ![数据采集架构](https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Data_Collect.jpeg)
@@ -18,7 +18,7 @@ Alex 新闻播报架构：
 ![新闻播报架构](https://aws-demo-center.s3-ap-southeast-1.amazonaws.com/demopic/Alexa_Skill.jpeg)
 </a>
 
-## 3.How to use the demo
+## 3.如何使用本demo
 
 ### 3.1 准备工作
 #### （1）前提条件
