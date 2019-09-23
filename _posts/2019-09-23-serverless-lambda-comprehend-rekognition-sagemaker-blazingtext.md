@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "基于文本的商品分类识别及图片审核方案"
+title:  "商品类别识别及图片审核方案"
 toc: true
 ---
 
