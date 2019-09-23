@@ -14,11 +14,11 @@ toc: true
 
 ## Demo网站
 
-- 网站主页 http://mb3.zjutdp.club.s3-website-us-east-1.amazonaws.com/
-- 模拟卖家创建商品页面 http://mb3.zjutdp.club.s3-website-us-east-1.amazonaws.com/createproduct.html
-- 模拟电商商品审核页面 http://mb3.zjutdp.club.s3-website-us-east-1.amazonaws.com/moderation.html
+- 网站主页 [http://mb3.zjutdp.club.s3-website-us-east-1.amazonaws.com/](http://mb3.zjutdp.club.s3-website-us-east-1.amazonaws.com/)
+- 模拟卖家创建商品页面 [http://mb3.zjutdp.club.s3-website-us-east-1.amazonaws.com/createproduct.html](http://mb3.zjutdp.club.s3-website-us-east-1.amazonaws.com/createproduct.html)
+- 模拟电商商品审核页面 [http://mb3.zjutdp.club.s3-website-us-east-1.amazonaws.com/moderation.html](http://mb3.zjutdp.club.s3-website-us-east-1.amazonaws.com/moderation.html)
 
-[^因为Demo的数据存储在DynamoDB的表上应用了2个小时TTL设置，所以数据两个小时候会自动清空]: 
+> 因为Demo的数据存储在DynamoDB的表上应用了2个小时TTL设置，所以数据两个小时候会自动清空
 
 ## 架构总览
 
